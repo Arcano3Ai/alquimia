@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="alchemyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="50%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Fondo circular oscuro -->
+  <circle cx="50" cy="50" r="48" fill="#06080F" stroke="#1E293B" stroke-width="2" />
+  
+  <!-- Triángulo alquímico exterior (Fuego/Transformación) -->
+  <polygon points="50,16 82,74 18,74" stroke="url(#alchemyGrad)" stroke-width="3" stroke-linejoin="round" fill="none" filter="url(#glow)" />
+  
+  <!-- Línea horizontal de transmutación táctica -->
+  <line x1="28" y1="52" x2="72" y2="52" stroke="#00F2FE" stroke-width="2.5" stroke-linecap="round" />
+  
+  <!-- Nodos de automatización -->
+  <circle cx="50" cy="16" r="4" fill="#00F2FE" />
+  <circle cx="82" cy="74" r="4" fill="#8B5CF6" />
+  <circle cx="18" cy="74" r="4" fill="#3B82F6" />
+  <circle cx="50" cy="52" r="5.5" fill="#00F2FE" filter="url(#glow)" />
+  <circle cx="50" cy="52" r="2.5" fill="#FFFFFF" />
+  
+  <!-- Nodos de flujo -->
+  <circle cx="34" cy="52" r="2" fill="#93C5FD" />
+  <circle cx="66" cy="52" r="2" fill="#C4B5FD" />
+</svg>
