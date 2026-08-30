@@ -79,3 +79,18 @@ test('HTML Integrity - Mobile toggle button required by main.js', () => {
     'Missing nav links container in index.html'
   );
 });
+
+test('HTML Integrity - Ambient Audio Player required by audio-player.js', () => {
+  assert.ok(
+    existingIds.has('bgMusic'),
+    'Missing audio element id="bgMusic" in index.html'
+  );
+  assert.ok(
+    existingIds.has('musicToggleBtn'),
+    'Missing music toggle button id="musicToggleBtn" in index.html'
+  );
+  assert.ok(
+    htmlContent.includes('src="js/audio-player.js"'),
+    'Missing script tag for js/audio-player.js in index.html'
+  );
+});

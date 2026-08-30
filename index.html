@@ -106,6 +106,16 @@
       </nav>
 
       <div class="nav-actions">
+        <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Activar o Pausar Música de Ambiente" title="Música de Ambiente Alquímico">
+          <div class="soundwave-icon">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+            <span class="bar bar4"></span>
+          </div>
+          <span class="music-btn-text">Audio: OFF</span>
+        </button>
+
         <a href="#diagnostico" class="btn btn-primary btn-sm" data-open-modal="diagnosisModal">
           <span>Diagnóstico Táctico</span>
           <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -1423,12 +1433,16 @@
     </div>
   </div>
 
+  <!-- Elemento de Audio Ambiente -->
+  <audio id="bgMusic" src="assets/audio/Alquimia%20T%C3%A1ctica%20(1).wav" loop preload="auto"></audio>
+
   <!-- JavaScript Modules -->
   <script src="js/alchemy-canvas.js"></script>
   <script src="js/roi-calculator.js"></script>
   <script src="js/workflow-simulator.js"></script>
   <script src="js/form-handler.js"></script>
   <script src="js/whatsapp-widget.js"></script>
+  <script src="js/audio-player.js"></script>
   <script src="js/main.js"></script>
 
 </body>
