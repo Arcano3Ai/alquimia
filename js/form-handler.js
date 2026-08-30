@@ -102,11 +102,11 @@ ${notes ? `\n- Detalle adicional: ${notes}` : ''}`;
       submitBtn.classList.add('btn-secondary');
 
       this.showStatus(
-        `¡Excelente, ${name}! Hemos registrado tu solicitud. Te estamos redirigiendo a WhatsApp para confirmar tu sesión estratégica o puedes hacer clic abajo.`,
+        `¡Excelente, ${name}! Tu información ha sido registrada. Haz clic en el botón de abajo para iniciar la conversación en WhatsApp con nuestro equipo de estrategia.`,
         'success'
       );
 
-      // Botón directo a WhatsApp
+      // Botón directo a WhatsApp (immune to popup blockers)
       const waActionBtn = document.createElement('a');
       waActionBtn.href = waUrl;
       waActionBtn.target = '_blank';
@@ -114,18 +114,13 @@ ${notes ? `\n- Detalle adicional: ${notes}` : ''}`;
       waActionBtn.className = 'btn btn-primary btn-sm';
       waActionBtn.style.marginTop = '1rem';
       waActionBtn.style.display = 'inline-flex';
-      waActionBtn.innerHTML = 'Abrir conversación en WhatsApp ➜';
+      waActionBtn.innerHTML = 'Abrir conversación en WhatsApp ⚡';
       this.statusBox.appendChild(waActionBtn);
-
-      // Opcional: auto redirección tras 2 segundos si el usuario lo prefiere
-      setTimeout(() => {
-        window.open(waUrl, '_blank');
-      }, 1500);
 
       this.form.reset();
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalBtnHtml;
-    }, 900);
+    }, 700);
   }
 
   showStatus(msg, type) {

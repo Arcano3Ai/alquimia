@@ -1125,7 +1125,29 @@
 }
 
 @media (max-width: 768px) {
-  .nav-links, .nav-actions .btn-sm {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(6, 8, 15, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 242, 254, 0.25);
+    padding: 1.5rem 2rem;
+    gap: 1.25rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.85);
+    animation: fadeInDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    z-index: 1000;
+  }
+
+  .nav-actions .btn-sm {
     display: none;
   }
 

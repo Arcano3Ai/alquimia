@@ -48,9 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Cerrar menú móvil si está abierto
-        const mobileMenu = document.querySelector('.mobile-nav-drawer');
-        if (mobileMenu && mobileMenu.classList.contains('is-open')) {
-          mobileMenu.classList.remove('is-open');
+        const navLinks = document.querySelector('.nav-links');
+        const mobileToggleBtn = document.querySelector('.mobile-toggle-btn');
+        if (navLinks && navLinks.classList.contains('mobile-open')) {
+          navLinks.classList.remove('mobile-open');
+          if (mobileToggleBtn) mobileToggleBtn.setAttribute('aria-expanded', 'false');
         }
       }
     });

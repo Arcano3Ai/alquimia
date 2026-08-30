@@ -43,8 +43,17 @@ class AlchemyEngineCanvas {
 
   resize() {
     const parent = this.canvas.parentElement;
-    this.width = this.canvas.width = parent.clientWidth;
-    this.height = this.canvas.height = parent.clientHeight;
+    const dpr = window.devicePixelRatio || 1;
+    this.width = parent.clientWidth;
+    this.height = parent.clientHeight;
+    this.canvas.width = this.width * dpr;
+    this.canvas.height = this.height * dpr;
+    if (this.ctx.resetTransform) {
+      this.ctx.resetTransform();
+    } else {
+      this.ctx.setTransform(1, 0, 0, 1, 0, 0);
+    }
+    this.ctx.scale(dpr, dpr);
   }
 
   spawnParticles() {
