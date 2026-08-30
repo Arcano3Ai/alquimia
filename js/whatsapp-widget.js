@@ -13,7 +13,7 @@ class WhatsAppWidget {
   init() {
     // Configurar enlace con mensaje inicial
     const defaultMsg = encodeURIComponent("Hola Alquimia Táctica, quiero información para automatizar procesos en mi empresa.");
-    this.widget.href = `https://wa.me/5215500000000?text=${defaultMsg}`;
+    this.widget.href = `https://wa.me/5218110155686?text=${defaultMsg}`;
     this.widget.target = "_blank";
     this.widget.rel = "noopener noreferrer";
 

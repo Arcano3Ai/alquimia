@@ -93,7 +93,7 @@ class DiagnosisFormHandler {
 - Principal cuello de botella: ${bottleneck || 'Procesos manuales'}
 ${notes ? `\n- Detalle adicional: ${notes}` : ''}`;
 
-    const waUrl = `https://wa.me/5215500000000?text=${encodeURIComponent(waText)}`;
+    const waUrl = `https://wa.me/5218110155686?text=${encodeURIComponent(waText)}`;
 
     // Simular procesamiento con alta disponibilidad
     setTimeout(() => {
